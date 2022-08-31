@@ -92,6 +92,20 @@ p {
 .nav-list .current {
   color: var(--accent-color);
 }
+.nav-list .current {
+  position: relative;
+}
+.nav-list .current::after {
+  position: absolute;
+  bottom: -1px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  border: none;
+}
 .contacts-list .link {
   display: flex;
   align-items: center;
@@ -153,6 +167,9 @@ p {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+/*Modal window*/
+
+/*Section - Features*/
 .section-title {
   margin-bottom: 50px;
   color: var(--title-text-color);
@@ -204,9 +221,31 @@ p {
   border-radius: 4px;
   background-color: var(--button-background-color);
 }
+/*Section - What we do*/
 .pictures-list .item {
   flex-basis: calc((100% - 60px) / 3);
 }
+.picture-description {
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-white-color);
+}
+.what-pictures-item {
+  position: relative;
+}
+.picture-description-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+/*Section - Our team*/
 .section.team {
   background-color: var(--button-background-color);
 }
@@ -439,4 +478,23 @@ p {
   border-left: 1px solid var(--portfolio-border-color);
   border-right: 1px solid var(--portfolio-border-color);
   border-bottom: 1px solid var(--portfolio-border-color);
+}
+.thumb {
+  position: relative;
+}
+.text-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--text-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.works-link:hover .text-hover {
+  opacity: 1;
 }
