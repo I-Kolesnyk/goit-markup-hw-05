@@ -479,7 +479,7 @@ p {
   transition: transform var(--transform-duration) var(--transform-timing-function);
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 .close-button {
   position: absolute;
